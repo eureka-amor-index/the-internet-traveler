@@ -241,3 +241,90 @@ a {
 .diary-entry p {
   color: var(--white);
 }
+
+.buttons-88x31 {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  margin-top: 34px;
+}
+
+.web-button {
+
+  width: 170px;
+
+  min-height: 48px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 8px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #ff4fd8,
+      #5b00ff
+    );
+
+  border:
+    3px outset #fff36d;
+
+  color: white;
+
+  text-decoration: none;
+
+  font-size: 12px;
+
+  line-height: 1.1;
+
+  text-transform: lowercase;
+
+  box-shadow:
+    4px 4px 0 #000;
+
+  image-rendering: pixelated;
+
+  transition: .15s ease;
+}
+
+.web-button:hover {
+
+  transform:
+    translate(-2px, -2px);
+
+  box-shadow:
+    6px 6px 0 #000;
+}
+
+.blink-button {
+
+  animation:
+    blinkButton 1s infinite;
+}
+
+.cyan-button {
+
+  background:
+    linear-gradient(
+      180deg,
+      #00e5ff,
+      #0044ff
+    );
+}
+
+@keyframes blinkButton {
+
+  50% {
+    opacity: .4;
+  }
+}
