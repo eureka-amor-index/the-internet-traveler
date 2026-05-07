@@ -383,3 +383,38 @@ a {
 .visitor-counter img {
   image-rendering: pixelated;
 }
+
+
+.hidden-link {
+
+  margin-top: 26px;
+
+  text-align: center;
+
+  opacity: .45;
+
+  transition: .3s ease;
+}
+
+.hidden-link:hover {
+
+  opacity: 1;
+}
+
+.hidden-link a {
+
+  color: #00e5ff;
+
+  text-decoration: none;
+
+  font-size: 12px;
+
+  letter-spacing: 2px;
+
+  text-transform: lowercase;
+}
+
+.hidden-link a:hover {
+
+  color: #ff4fd8;
+}
