@@ -328,3 +328,18 @@ a {
     opacity: .4;
   }
 }
+
+.visitor-counter {
+  margin-top: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  border: 3px dashed #00e5ff;
+  padding: 12px;
+  box-shadow: 4px 4px 0 #000;
+}
+
+.visitor-counter img {
+  image-rendering: pixelated;
+}
