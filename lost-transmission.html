@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Lost Transmission</title>
+
+<style>
+
+body {
+
+  margin: 0;
+
+  background: black;
+
+  color: #00ff99;
+
+  font-family: "Courier New", monospace;
+
+  overflow-x: hidden;
+
+  padding: 40px;
+}
+
+.noise {
+
+  position: fixed;
+
+  inset: 0;
+
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      rgba(255,255,255,.03) 0px,
+      rgba(255,255,255,.03) 1px,
+      transparent 1px,
+      transparent 2px
+    );
+
+  pointer-events: none;
+
+  animation:
+    noiseMove .15s infinite;
+}
+
+@keyframes noiseMove {
+
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(2px);
+  }
+}
+
+.container {
+
+  max-width: 760px;
+
+  margin: auto;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+h1 {
+
+  font-size: clamp(42px, 10vw, 110px);
+
+  color: #ff4fd8;
+
+  margin-bottom: 10px;
+
+  text-shadow:
+    0 0 10px #ff4fd8,
+    0 0 20px #00e5ff;
+}
+
+.signal {
+
+  color: #00e5ff;
+
+  margin-bottom: 40px;
+
+  font-size: 14px;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  animation:
+    blink 1s infinite;
+}
+
+@keyframes blink {
+
+  50% {
+    opacity: .3;
+  }
+}
+
+.log {
+
+  border-left: 4px solid #00e5ff;
+
+  padding-left: 20px;
+
+  margin: 26px 0;
+
+  line-height: 1.7;
+}
+
+.glitch {
+
+  color: #fff36d;
+
+  text-shadow:
+    2px 0 #ff4fd8,
+    -2px 0 #00e5ff;
+}
+
+.back-link {
+
+  margin-top: 60px;
+}
+
+.back-link a {
+
+  color: #00e5ff;
+
+  text-decoration: none;
+
+  border: 1px solid #00e5ff;
+
+  padding: 10px 14px;
+
+  display: inline-block;
+}
+
+.back-link a:hover {
+
+  background: #00e5ff;
+
+  color: black;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="noise"></div>
+
+<div class="container">
+
+  <div class="signal">
+    SIGNAL STATUS: UNSTABLE
+  </div>
+
+  <h1>
+    LOST TRANSMISSION
+  </h1>
+
+  <div class="log">
+    archived fragments recovered from an abandoned section of the web...
+  </div>
+
+  <div class="log glitch">
+    some pages are not deleted.
+    they continue existing somewhere between broken hyperlinks and forgotten memory.
+  </div>
+
+  <div class="log">
+    if you are reading this,
+    the connection is still active.
+  </div>
+
+  <div class="log">
+    the traveler was here.
+  </div>
+
+  <div class="back-link">
+    <a href="./index.html">
+      return to the main signal
+    </a>
+  </div>
+
+</div>
+
+</body>
+
+</html>
