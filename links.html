@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Links | The Internet Traveler</title>
+
+  <meta name="description" content="A tiny portal hub connecting the digital traces, profiles, and signals of Eureka Amor across the internet." />
+
+  <style>
+
+    :root {
+      --bg: #120028;
+      --purple: #5b00ff;
+      --pink: #ff4fd8;
+      --cyan: #00e5ff;
+      --yellow: #fff36d;
+      --white: #ffffff;
+      --black: #050008;
+      --panel: #210044;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Courier New", monospace;
+      color: var(--white);
+
+      background:
+        linear-gradient(45deg, rgba(255,255,255,.04) 25%, transparent 25%),
+        linear-gradient(-45deg, rgba(255,255,255,.04) 25%, transparent 25%),
+        linear-gradient(135deg, #120028, #001f3f);
+
+      background-size: 18px 18px, 18px 18px, cover;
+    }
+
+    .page {
+      width: min(1100px, 94%);
+      margin: 24px auto;
+      border: 4px double var(--cyan);
+      background: rgba(0,0,0,.55);
+      box-shadow: 0 0 20px var(--pink);
+    }
+
+    .top-bar,
+    footer {
+      text-align: center;
+      background: var(--black);
+      color: var(--yellow);
+      padding: 10px;
+      border-bottom: 3px solid var(--pink);
+    }
+
+    footer {
+      border-top: 3px solid var(--cyan);
+      border-bottom: 0;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 18px;
+      padding: 18px;
+    }
+
+    .sidebar,
+    .window {
+      border: 3px ridge var(--cyan);
+      background: var(--panel);
+      box-shadow: 6px 6px 0 var(--black);
+    }
+
+    .profile-box {
+      padding: 16px;
+      text-align: center;
+    }
+
+    .profile-box h2 {
+      color: var(--pink);
+      text-shadow: 2px 2px 0 var(--black);
+      font-size: 26px;
+    }
+
+    .avatar {
+      width: 130px;
+      height: 130px;
+      margin: 14px auto;
+      border: 4px solid var(--yellow);
+
+      background:
+        linear-gradient(90deg, var(--pink), var(--cyan));
+
+      display: grid;
+      place-items: center;
+
+      font-size: 56px;
+
+      box-shadow: inset 0 0 0 6px var(--black);
+    }
+
+    .status {
+      color: var(--cyan);
+      font-size: 14px;
+    }
+
+    .menu {
+      padding: 0;
+      margin: 18px 0 0;
+      list-style: none;
+    }
+
+    .menu li {
+      margin: 8px 0;
+    }
+
+    .menu a {
+      display: block;
+      background: var(--black);
+      color: var(--yellow);
+      padding: 8px;
+      border: 2px outset var(--pink);
+      text-decoration: none;
+    }
+
+    .menu a:hover {
+      background: var(--pink);
+      color: var(--black);
+    }
+
+    .window-header {
+      display: flex;
+      justify-content: space-between;
+      background: linear-gradient(90deg, var(--pink), var(--purple));
+      padding: 8px 10px;
+      border-bottom: 3px solid var(--black);
+      font-weight: bold;
+    }
+
+    .window-body {
+      padding: 24px;
+    }
+
+    h1 {
+      font-size: clamp(42px, 8vw, 82px);
+      line-height: .85;
+      margin: 0 0 20px;
+
+      color: var(--cyan);
+
+      text-transform: uppercase;
+
+      text-shadow:
+        4px 4px 0 var(--pink),
+        8px 8px 0 var(--black);
+    }
+
+    .intro {
+      font-size: 18px;
+      color: #f5d7ff;
+      max-width: 700px;
+    }
+
+    marquee {
+      display: block;
+      margin: 24px 0;
+      padding: 10px;
+      color: var(--yellow);
+      background: var(--black);
+      border: 2px dashed var(--cyan);
+    }
+
+    .links-grid {
+      display: grid;
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .link-card {
+      display: block;
+      padding: 18px;
+      background: #000;
+      border: 3px ridge var(--cyan);
+      text-decoration: none;
+      color: var(--white);
+      transition: .2s ease;
+    }
+
+    .link-card:hover {
+      transform: translate(-4px, -4px);
+      background: var(--pink);
+      color: var(--black);
+      box-shadow: 6px 6px 0 var(--black);
+    }
+
+    .link-card h2 {
+      margin: 0 0 8px;
+      font-size: 28px;
+      text-transform: lowercase;
+    }
+
+    .link-card p {
+      margin: 0;
+      font-size: 15px;
+    }
+
+    .blink {
+      animation: blink 1s infinite;
+      color: var(--yellow);
+    }
+
+    @keyframes blink {
+      50% {
+        opacity: 0;
+      }
+    }
+
+    @media (max-width: 800px) {
+
+      .layout {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        text-shadow:
+          3px 3px 0 var(--pink),
+          6px 6px 0 var(--black);
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="page">
+
+    <header class="top-bar">
+      <p>★ internet portals ★</p>
+    </header>
+
+    <main class="layout">
+
+      <aside class="sidebar">
+
+        <div class="profile-box">
+
+          <h2>Eureka Amor</h2>
+
+          <div class="avatar">
+            ✦
+          </div>
+
+          <p class="status">
+            status: surfing the web...
+          </p>
+
+          <ul class="menu">
+            <li><a href="./index.html">home</a></li>
+            <li><a href="./diary.html">diary</a></li>
+            <li><a href="./links.html">links</a></li>
+            <li><a href="./guestbook.html">guestbook</a></li>
+          </ul>
+
+        </div>
+
+      </aside>
+
+      <section class="content">
+
+        <div class="window">
+
+          <div class="window-header">
+            <span>links_directory.exe</span>
+            <span>_ □ x</span>
+          </div>
+
+          <div class="window-body">
+
+            <h1>Links</h1>
+
+            <p class="intro">
+              Tiny portals connecting scattered signals across the internet.
+            </p>
+
+            <marquee>
+              ✦ click responsibly... hyperlinks may alter your timeline... ✦
+            </marquee>
+
+            <div class="links-grid">
+
+              <a
+                class="link-card"
+                href="https://www.instagram.com/eureka_amor"
+                target="_blank">
+
+                <h2>instagram</h2>
+
+                <p>
+                  visual diary, fragments, cyberpunk traveler energy
+                </p>
+
+              </a>
+
+              <a
+                class="link-card"
+                href="https://www.tiktok.com/@eurekaamor"
+                target="_blank">
+
+                <h2>tiktok</h2>
+
+                <p>
+                  internet transmissions, thoughts, strange signals
+                </p>
+
+              </a>
+
+              <a
+                class="link-card"
+                href="https://www.linkedin.com/in/eurekaamor/"
+                target="_blank">
+
+                <h2>linkedin</h2>
+
+                <p>
+                  sxo, search systems, digital identity research
+                </p>
+
+              </a>
+
+              <a
+                class="link-card"
+                href="https://eurekaamor.com/"
+                target="_blank">
+
+                <h2>eurekaamor.com</h2>
+
+                <p>
+                  main portal to the wider universe
+                </p>
+
+              </a>
+
+            </div>
+
+            <p style="margin-top:32px;">
+              <span class="blink">█</span>
+              end of transmission...
+            </p>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </main>
+
+    <footer>
+      <p>made with pixels, drama, and unstable wifi ✦ 2000s web forever</p>
+    </footer>
+
+  </div>
+
+</body>
+</html>
